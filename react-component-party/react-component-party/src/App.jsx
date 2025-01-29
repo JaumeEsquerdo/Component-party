@@ -78,7 +78,7 @@ const App = () => {
     {/* si es contenido se manda como children, si son datos se mandan como props */}
 
       {/* ACTIVIDAD 10 */}
-      <AlertBox status="succes">
+      <AlertBox status="success">
         Perfecto!
       </AlertBox>
       <AlertBox status="warning">

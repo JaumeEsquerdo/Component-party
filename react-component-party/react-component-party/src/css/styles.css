@@ -14,3 +14,21 @@
     color: #000;
     
 }
+.AlertBox{
+    width: 200px;
+    border: 2px solid black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.AlertBox--success{
+    background-color: #4dd34d;
+}
+.AlertBox--warning{
+    background-color: #cdd828;
+}
+.AlertBox--error{
+    background-color: #d34d4d;
+}
