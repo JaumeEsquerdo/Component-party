@@ -1,7 +1,10 @@
 const Tarea = ({ nombre, completada }) => {
+
+    
     return (
         <div className="tarea">
-            <p>{nombre}: {completada ? "completada" : "pendiente"}.</p>
+            <p><input type="checkbox" checked={completada}/>{nombre}</p>
+            {/* <p>{nombre}: {completada ? "completada" : "pendiente"}.</p> */}
         </div>
     );
 }
