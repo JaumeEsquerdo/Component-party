@@ -4,6 +4,9 @@ import PerfilUsuario from './components/PerfilUsuario';
 import GaleriaImagenes from './components/GaleriaImagenes';
 import BlogPost from './components/BlogPost';
 import AlertBox from './components/AlertBox';
+import Header from './components/Header';
+
+import ImgLogo from './assets/img/logo.png';
 
 import './css/App.css'
 
@@ -87,6 +90,10 @@ const App = () => {
       <AlertBox status="error">
         ERRRRRRRRROR
       </AlertBox>
+
+      {/* ACTIVIDAD 1 EXTRAS */}
+      <Header logo={ImgLogo} />
+
   </>);
 }
 
