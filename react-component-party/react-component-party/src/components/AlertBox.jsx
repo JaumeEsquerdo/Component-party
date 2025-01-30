@@ -15,6 +15,7 @@ const AlertBox = ({ status, children }) => {
 
 
         //si pusiera {styles.status} estaria buscando un objeto llamado status, pero no existe. Por eso se pone {styles[status]} para que busque el objeto que se le pasa como prop; podria buscar {styles.success} o {styles.warning} o {styles.error}
+        
          <div style={styles[status]}> 
          {children}
      </div>
