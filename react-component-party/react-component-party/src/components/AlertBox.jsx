@@ -7,12 +7,15 @@ const AlertBox = ({ status, children }) => {
     };
     
     return (
-        // <div className={`AlertBox AlertBox--${status}`}>
+        // <div className={`AlertBox AlertBous}x--${stat`}>
         //     {/* el status de arriba se pone con $, ya que es una parte de HTML */}
 
         //     {children}
         // </div>
-         <div style={styles[status]}>
+
+
+        //si pusiera {styles.status} estaria buscando un objeto llamado status, pero no existe. Por eso se pone {styles[status]} para que busque el objeto que se le pasa como prop; podria buscar {styles.success} o {styles.warning} o {styles.error}
+         <div style={styles[status]}> 
          {children}
      </div>
     );
