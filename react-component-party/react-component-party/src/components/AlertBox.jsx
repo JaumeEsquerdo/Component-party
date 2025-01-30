@@ -7,7 +7,7 @@ const AlertBox = ({ status, children }) => {
     };
     
     return (
-        // <div className={`AlertBox AlertBous}x--${stat`}>
+        // <div className={`AlertBox AlertBous}x--${status}`}>
         //     {/* el status de arriba se pone con $, ya que es una parte de HTML */}
 
         //     {children}
