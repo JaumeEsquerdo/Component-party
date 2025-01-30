@@ -3,6 +3,8 @@ import './css/App.css'
 import Productos from './components/ListaProductos'
 import Comentarios from './components/ListaComentarios'
 import Testimonios from './components/ListaTestimonios'
+import EventosCalendario from './components/ListaCalendario'
+import TarjetasRecetas from './components/TarjetasRecetas'
 
 function App() {
 
@@ -146,6 +148,86 @@ const testimonios = [
   }
 ]
 
+const eventosCalendario = [
+  {
+    "id": 1,
+    "title": "Reunión de equipo",
+    "date": "2024-07-05",
+    "time": "10:00",
+    "location": "Sala de conferencias A"
+  },
+  {
+    "id": 2,
+    "title": "Lanzamiento de producto",
+    "date": "2024-07-10",
+    "time": "14:00",
+    "location": "Auditorio principal"
+  },
+  {
+    "id": 3,
+    "title": "Taller de desarrollo web",
+    "date": "2024-07-15",
+    "time": "09:00",
+    "location": "Sala de formación B"
+  },
+  {
+    "id": 4,
+    "title": "Cena de empresa",
+    "date": "2024-07-20",
+    "time": "20:00",
+    "location": "Restaurante El Mirador"
+  }
+];
+
+const tarjetasRecetas = [
+  {
+    "id": 1,
+    "name": "Paella Valenciana",
+    "image": "https://example.com/paella.jpg",
+    "ingredients": [
+      "400g de arroz bomba",
+      "1 kg de pollo troceado",
+      "200g de judías verdes",
+      "200g de garrofó (judía blanca)",
+      "1 tomate rallado",
+      "Azafrán",
+      "Aceite de oliva",
+      "Sal",
+      "Agua"
+    ],
+    "instructions": [
+      "Sofríe el pollo en una paella con aceite de oliva.",
+      "Añade las judías verdes y el garrofó, y sofríe unos minutos más.",
+      "Incorpora el tomate rallado y cocina hasta que se evapore el agua.",
+      "Agrega el arroz y remueve para que se impregne bien.",
+      "Vierte el agua caliente (el doble que de arroz) y el azafrán.",
+      "Cocina a fuego fuerte durante 10 minutos y luego a fuego lento otros 8 minutos.",
+      "Deja reposar unos minutos antes de servir."
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Guacamole",
+    "image": "https://example.com/guacamole.jpg",
+    "ingredients": [
+      "3 aguacates maduros",
+      "1 tomate",
+      "1/2 cebolla",
+      "1 chile jalapeño (opcional)",
+      "Jugo de 1 limón",
+      "Cilantro fresco",
+      "Sal"
+    ],
+    "instructions": [
+      "Corta los aguacates por la mitad, retira el hueso y vacía la pulpa en un bol.",
+      "Machaca los aguacates con un tenedor hasta obtener una consistencia cremosa.",
+      "Pica finamente el tomate, la cebolla y el jalapeño (si lo usas) y añádelos al bol.",
+      "Agrega el jugo de limón, cilantro picado y sal al gusto.",
+      "Mezcla todos los ingredientes hasta que estén bien integrados.",
+      "Sirve inmediatamente con totopos o chips de maíz."
+    ]
+  }
+];
 
   return (
     <>
@@ -153,6 +235,8 @@ const testimonios = [
     <Productos listaproductos={productos} />
     <Comentarios listacomentarios={comentarios} />
     <Testimonios listatestimonios={testimonios} />
+    <EventosCalendario listacalendario={eventosCalendario}/>
+    <TarjetasRecetas TarjetasDeRecetas={tarjetasRecetas}/>
 
     </>
   )

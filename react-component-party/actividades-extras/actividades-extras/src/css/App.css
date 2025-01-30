@@ -52,7 +52,7 @@
 
 }
 
-.Comentarios, .Testimonios, .Productos, .Menu{
+.Comentarios, .Testimonios, .Productos, .Menu, .Event-list, .TarjetasRecetas{
   padding: 10px;
   border-radius: 10px;
   
@@ -60,25 +60,27 @@
 
 .Testimonios{
   background-color: azure;
-  
-
+}
+.TarjetasRecetas{
+  background-color: rgb(64, 3, 51);
 }
 
 .Comentarios{
-  background-color: rgb(255, 245, 240);
-  
+  background-color: rgb(237, 176, 145);
 }
 
 .Productos{
-  background-color: rgb(201, 232, 197);
-
+  background-color: rgb(179, 236, 171);
 }
 
 .Menu{
   background-color: rgb(178, 194, 189);
 
 }
-.Testimonios-item, .Comentarios-item, .Productos-item, .Menu-section{
+.Event-list{
+  background-color: rgb(250, 106, 106);
+}
+.Testimonios-item, .Comentarios-item, .Productos-item, .Menu-section, .Event-item, .TarjetasRecetas-item{
   background-color: white;
   padding: 10px;
   margin: 10px;
@@ -88,5 +90,4 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-
 }
