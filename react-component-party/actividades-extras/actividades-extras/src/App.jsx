@@ -1,7 +1,8 @@
 import Menu from './components/Menu'
 import './css/App.css'
 import Productos from './components/ListaProductos'
-import Comentarios from './components/ListaComentarios';
+import Comentarios from './components/ListaComentarios'
+import Testimonios from './components/ListaTestimonios'
 
 function App() {
 
@@ -116,11 +117,42 @@ function App() {
       }
     ];
 
+
+// json de Testimonios
+const testimonios = [
+  {
+    "id": 1,
+    "name": "Laura Sánchez",
+    "position": "Directora de Marketing",
+    "company": "TechCorp",
+    "testimonial": "El servicio al cliente es excepcional. Siempre están dispuestos a ayudar y resolver cualquier problema.",
+    "image": "https://example.com/laura-sanchez.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Pedro Gómez",
+    "position": "Desarrollador Senior",
+    "company": "WebSolutions",
+    "testimonial": "La plataforma es intuitiva y fácil de usar. Ha mejorado significativamente nuestra productividad.",
+    "image": "https://example.com/pedro-gomez.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Isabel Torres",
+    "position": "CEO",
+    "company": "InnovateNow",
+    "testimonial": "Gracias a este producto, hemos podido escalar nuestro negocio de manera eficiente y sostenible.",
+    "image": "https://example.com/isabel-torres.jpg"
+  }
+]
+
+
   return (
     <>
     <Menu menu={restaurant.menu} />
     <Productos listaproductos={productos} />
     <Comentarios listacomentarios={comentarios} />
+    <Testimonios listatestimonios={testimonios} />
 
     </>
   )

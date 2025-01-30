@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -43,5 +49,44 @@
 
 .Replies{
   color: rgb(139, 65, 18);
+
+}
+
+.Comentarios, .Testimonios, .Productos, .Menu{
+  padding: 10px;
+  border-radius: 10px;
+  
+}
+
+.Testimonios{
+  background-color: azure;
+  
+
+}
+
+.Comentarios{
+  background-color: rgb(255, 245, 240);
+  
+}
+
+.Productos{
+  background-color: rgb(201, 232, 197);
+
+}
+
+.Menu{
+  background-color: rgb(178, 194, 189);
+
+}
+.Testimonios-item, .Comentarios-item, .Productos-item, .Menu-section{
+  background-color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 
 }

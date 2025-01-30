@@ -1,8 +1,8 @@
 const ListaProductos = ({ listaproductos }) => {
     return (
-        <div>
+        <div className="Productos">
             {listaproductos.map(({ id, name, price, description, image }) => (
-                <div key={id}>
+                <div key={id} className="Productos-item">
                     <h3>{name}</h3>
                     <p>{price}</p>
                     <p>{description}</p>

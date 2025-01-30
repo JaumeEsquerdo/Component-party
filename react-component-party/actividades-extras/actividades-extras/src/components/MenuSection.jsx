@@ -1,6 +1,6 @@
 const MenuSection = ({ title, items }) => {
     return (
-        <div>
+        <div className="Menu-section">
             <h2>{title}</h2>
             <ul>
                 {items.map((item) => (
