@@ -5,6 +5,7 @@ import GaleriaImagenes from './components/GaleriaImagenes';
 import BlogPost from './components/BlogPost';
 import AlertBox from './components/AlertBox';
 import Header from './components/Header';
+import Gallery from './components/Gallery';
 
 import ImgLogo from './assets/img/logo.png';
 
@@ -94,9 +95,20 @@ const App = () => {
       {/* ACTIVIDAD 1 EXTRAS */}
       <Header logo={ImgLogo} />
 
+      {/* Actividad 2 extras */}
+      <Gallery images={images} />
+
   </>);
 }
 
 
 
 export default App
+
+
+//Actividad 2 extras
+
+const images = [
+  { "src": "image1.jpg", "alt": "Image 1", "title": "Image 1" },
+  { "src": "image2.jpg", "alt": "Image 2", "title": "Image 2" }
+]
