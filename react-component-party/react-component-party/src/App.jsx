@@ -11,6 +11,12 @@ import ImgLogo from './assets/img/logo.png';
 
 import './css/App.css'
 
+//importar componentes
+import {Contador} from './components/estados/Contador'
+import {Interruptor} from './components/estados/Interruptor'
+
+
+
 // utilizar export común con {} para mandar más de una cosa { TarjetaUsuario, Avatar }
 
 //ACTIVIDAD 1
@@ -59,7 +65,23 @@ const App = () => {
   // los props son fijos y los children son variables
   // children se escribe dentro de las etiquetas de apertura y cierre de un componente y se pasa como un prop más
 
+
+
+
   return (<>
+
+    <h3>Ejemplos con useState</h3>
+
+    < Contador/>
+    < Contador/>
+
+    Un botón que haga de interruptor entre encendido y apagado y también cambie su color.
+    <Interruptor />
+    
+
+
+
+
     {/* ACTIVIDAD 1 */}
     <TarjetaUsuario nombre={lista[0].nombre} edad={lista[0].edad} ocupacion={lista[0].ocupacion} />
     <TarjetaUsuario nombre={lista[1].nombre} edad={lista[1].edad} ocupacion={"no tiene trabajo"} />
