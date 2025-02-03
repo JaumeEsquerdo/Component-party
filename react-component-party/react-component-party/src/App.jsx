@@ -7,6 +7,8 @@ import AlertBox from './components/AlertBox';
 import Header from './components/Header';
 import Gallery from './components/Gallery';
 
+import ListaDeTareas from './components/estados/ListaDeTareas';
+
 import ImgLogo from './assets/img/logo.png';
 
 import './css/App.css'
@@ -14,6 +16,7 @@ import './css/App.css'
 //importar componentes
 import {Contador} from './components/estados/Contador'
 import {Interruptor} from './components/estados/Interruptor'
+import { useState } from 'react';
 
 
 
@@ -38,6 +41,11 @@ const tareas = [
 
 
 const App = () => {
+  const [nombre, setNombre] = useState("Jaume")
+
+
+
+
 
   // PerfilUsuario (Objeto Anidado) ACTIVIDAD 3
   const userData = {
@@ -77,6 +85,14 @@ const App = () => {
 
     Un botón que haga de interruptor entre encendido y apagado y también cambie su color.
     <Interruptor />
+
+
+    {/* Crear una lista de tareas, utilizando un input. El input debe tener el atributo onChange={(e)=> {setVariableInteligente(e.target.value)}} */}
+
+    <ListaDeTareas />
+
+    <input type='text' placeholder='Escribe tu nombre' value={nombre} onChange={(e)=> setNombre(e.target.value)} />
+    <p>Tu nombre es : {nombre}</p>
     
 
 

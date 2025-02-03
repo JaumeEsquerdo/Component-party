@@ -8,12 +8,27 @@ export const Interruptor = () => {
         setEncendido(!encendido)
     };
 
+
+    // estilos boton
+    const darkStyle = {
+        backgroundColor: 'black',
+        color: 'white'
+    }
+
+    const lightStyle = {
+         backgroundColor: 'white',
+        color: 'black'
+    }
+
+    const buttonStyle = encendido? lightStyle : darkStyle;
+
     const isEncendida = encendido ? "Encendido" : "Apagado";
     
-
+    // className={encendido ? "on" : "off"}
+    // style={} para cambiar directamente el estilo 
     return (
         <>
-        <button onClick={handleClick} className={encendido ? "on" : "off"}>{isEncendida} </button>
+        <button onClick={handleClick}  style={buttonStyle}>{isEncendida} </button>
         </>
     );
 }
