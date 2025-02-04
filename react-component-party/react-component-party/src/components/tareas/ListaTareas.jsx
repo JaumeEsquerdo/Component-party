@@ -1,11 +1,12 @@
 import Tarea from './Tarea';
-const styleUsuario = { color: "darkblue", fontSize: "2.5rem" };
 
+const bgColor = {backgroundColor: "lightblue"};
+const styleUsuario = { color: "darkblue", fontSize: "2.5rem" };
 
 export const ListaTareas = ({ tareas }) => {
 
     return (
-        <div>
+        <div style={bgColor}>
             <h2 style={styleUsuario}>Lista de Tareas</h2>
             {/* aqui recorremos el array y llamamos a Tarea por cada elemento */}
             {tareas.map((tarea) => (

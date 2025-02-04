@@ -7,6 +7,8 @@ import AlertBox from './components/AlertBox';
 import Header from './components/Header';
 import Gallery from './components/Gallery';
 
+import GaleriaImagens from './components/estados/GaleriaImagens';
+
 import ListaDeTareas from './components/estados/ListaDeTareas';
 
 import ImgLogo from './assets/img/logo.png';
@@ -14,8 +16,9 @@ import ImgLogo from './assets/img/logo.png';
 import './css/App.css'
 
 //importar componentes
-import {Contador} from './components/estados/Contador'
-import {Interruptor} from './components/estados/Interruptor'
+import { Contador } from './components/estados/Contador'
+import { Interruptor } from './components/estados/Interruptor'
+import FormRegistro  from './components/estados/FormRegistro'
 import { useState } from 'react';
 
 
@@ -80,8 +83,8 @@ const App = () => {
 
     <h3>Ejemplos con useState</h3>
 
-    < Contador/>
-    < Contador/>
+    < Contador />
+    < Contador />
 
     Un botón que haga de interruptor entre encendido y apagado y también cambie su color.
     <Interruptor />
@@ -91,9 +94,12 @@ const App = () => {
 
     <ListaDeTareas />
 
-    <input type='text' placeholder='Escribe tu nombre' value={nombre} onChange={(e)=> setNombre(e.target.value)} />
+    <FormRegistro />
+
+    <input type='text' placeholder='Escribe tu nombre' value={nombre} onChange={(e) => setNombre(e.target.value)} />
     <p>Tu nombre es : {nombre}</p>
-    
+
+<GaleriaImagens/>
 
 
 
@@ -119,22 +125,22 @@ const App = () => {
     </BlogPost>
     {/* si es contenido se manda como children, si son datos se mandan como props */}
 
-      {/* ACTIVIDAD 10 */}
-      <AlertBox status="success">
-        Perfecto!
-      </AlertBox>
-      <AlertBox status="warning">
-        ¡Atención!
-      </AlertBox>
-      <AlertBox status="error">
-        ERRRRRRRRROR
-      </AlertBox>
+    {/* ACTIVIDAD 10 */}
+    <AlertBox status="success">
+      Perfecto!
+    </AlertBox>
+    <AlertBox status="warning">
+      ¡Atención!
+    </AlertBox>
+    <AlertBox status="error">
+      ERRRRRRRRROR
+    </AlertBox>
 
-      {/* ACTIVIDAD 1 EXTRAS */}
-      <Header logo={ImgLogo} />
+    {/* ACTIVIDAD 1 EXTRAS */}
+    <Header logo={ImgLogo} />
 
-      {/* Actividad 2 extras */}
-      <Gallery images={images} />
+    {/* Actividad 2 extras */}
+    <Gallery images={images} />
 
   </>);
 }
