@@ -10,6 +10,7 @@ import Gallery from './components/Gallery';
 import GaleriaImagens from './components/estados/GaleriaImagens';
 
 import ListaDeTareas from './components/estados/ListaDeTareas';
+import Calculadora from './components/estados/Calculadora';
 
 import ImgLogo from './assets/img/logo.png';
 
@@ -18,7 +19,7 @@ import './css/App.css'
 //importar componentes
 import { Contador } from './components/estados/Contador'
 import { Interruptor } from './components/estados/Interruptor'
-import FormRegistro  from './components/estados/FormRegistro'
+import FormRegistro from './components/estados/FormRegistro'
 import { useState } from 'react';
 
 
@@ -99,7 +100,8 @@ const App = () => {
     <input type='text' placeholder='Escribe tu nombre' value={nombre} onChange={(e) => setNombre(e.target.value)} />
     <p>Tu nombre es : {nombre}</p>
 
-<GaleriaImagens/>
+    <GaleriaImagens />
+    <Calculadora />
 
 
 
