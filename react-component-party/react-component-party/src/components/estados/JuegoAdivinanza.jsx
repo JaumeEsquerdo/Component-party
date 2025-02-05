@@ -5,10 +5,8 @@ const JuegoAdivinanza = () => {
     const randomNum = Math.floor(Math.random() * 100) + 1; //nunero aleatorio
     const [secreto] = useState(randomNum); //numero secreto
     const [intento, setIntento] = useState("");  //intento usuario
-    const [pistas, setPistas] = useState("") //pista caliente / frio
+    const [pistas, setPistas] = useState("") //pista
     const [intentos, setIntentos] = useState(0); //contador de intentos
-
-
 
     const verificarIntento = () => {
         const numeroIntento = parseInt(intento);
@@ -19,7 +17,10 @@ const JuegoAdivinanza = () => {
             return;
         }
 
+
         setIntentos(prevIntentos => prevIntentos + 1)
+
+
 
         if (numeroIntento == secreto) {
             setPistas("Enhorabuena! Acertaste!")
@@ -28,28 +29,23 @@ const JuegoAdivinanza = () => {
         } else {
             setPistas("Baja baja")
         }
-
-
     }
-
-
-
-
-
 
     return (
         <div style={{ backgroundColor: "lightyellow", padding: "10px" }}>
             <h1>Juego adivinanza</h1>
             <p>Adivina el número del 1 al 100</p>
 
-            <input type="number" value={intento} onChange={(e)=>setIntento(e.target.value)} />
+            <input type="number" value={intento} onChange={(e) => setIntento(e.target.value)} />
 
-        <button onClick={verificarIntento}>Verificar</button>
-        <button onClick={()=>{
-            setIntentos(0);
-            setPistas("");
-            setIntento("");
-        }}>Reiniciar Juego</button>
+            <button onClick={verificarIntento}>Verificar</button>
+
+            <button onClick={() => {
+                setIntentos(0);
+                setPistas("");
+                setIntento("");
+            }}>Reiniciar Juego</button>
+            
             <p>{pistas}</p>
 
             <p>{intentos}</p>

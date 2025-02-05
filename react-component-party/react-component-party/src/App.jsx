@@ -13,6 +13,9 @@ import ListaDeTareas from './components/estados/ListaDeTareas';
 import Calculadora from './components/estados/Calculadora';
 import Temporizador from './components/estados/Temporizador';
 import JuegoAdivinanza from './components/estados/JuegoAdivinanza';
+import EditorTexto from './components/estados/EditorTexto';
+import Calcular from './components/estados/Calcular';
+import Temporizar from './components/estados/Temporizar';
 
 import ImgLogo from './assets/img/logo.png';
 
@@ -48,8 +51,6 @@ const tareas = [
 
 const App = () => {
   const [nombre, setNombre] = useState("Jaume")
-
-
 
 
 
@@ -106,6 +107,10 @@ const App = () => {
     <Calculadora />
     <Temporizador/>
     <JuegoAdivinanza />
+    <EditorTexto />
+    <Calcular />
+    <Temporizar/>
+
 
 
 

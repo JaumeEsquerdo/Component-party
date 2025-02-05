@@ -49,7 +49,6 @@ const FormRegistro = () => {
             ...prevState,
             [e.target.name]: e.target.value
         }))
-
     }
 
     return (
