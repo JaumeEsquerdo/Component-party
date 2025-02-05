@@ -7,9 +7,8 @@ const Calculadora = () => {
     const [numero1, setNumero1] = useState("");
     const [numero2, setNumero2] = useState("");
     const [operacion, setOperacion] = useState('+');
-    const [resultado, setResultado] = useState(null);
+    const [resultado, setResultado] = useState(0);
     const [contador, setContador] = useState(0);
-
     //funcion para hacer el calculo
     const calcular = () => {
         const n1 = parseFloat(numero1);
@@ -45,6 +44,10 @@ const Calculadora = () => {
 
         //Uso de la actualización funcional para incrementar el contador
         setContador((prevContador) => prevContador + 1);
+    }
+
+    const handleReiniciar = () => {
+        setResultado(0)
     }
 
     return (
@@ -83,6 +86,9 @@ const Calculadora = () => {
                 <h2>Resultado {resultado}</h2>
                 <p>Calculos realizados : {contador}</p>
             </div>
+            <button onClick={handleReiniciar}>
+                    Reiniciar
+            </button>
 
         </div>
     );

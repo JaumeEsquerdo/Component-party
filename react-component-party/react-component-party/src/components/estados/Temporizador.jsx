@@ -3,12 +3,12 @@ import { useState } from 'react';
 const Temporizador = () => {
 
     const [tiempo, setTiempo] = useState(0);
-    const [activo, setActivo] = useState(null);
+    const [activo, setActivo] = useState(false);
 
     const iniciarPausar = () => {
         setActivo(prevActivo => !prevActivo)
     }
-
+    
     const reiniciar = () => {
         setTiempo(0);
         setActivo(false);

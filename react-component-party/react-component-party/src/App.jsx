@@ -12,6 +12,7 @@ import GaleriaImagens from './components/estados/GaleriaImagens';
 import ListaDeTareas from './components/estados/ListaDeTareas';
 import Calculadora from './components/estados/Calculadora';
 import Temporizador from './components/estados/Temporizador';
+import JuegoAdivinanza from './components/estados/JuegoAdivinanza';
 
 import ImgLogo from './assets/img/logo.png';
 
@@ -104,6 +105,7 @@ const App = () => {
     <GaleriaImagens />
     <Calculadora />
     <Temporizador/>
+    <JuegoAdivinanza />
 
 
 
