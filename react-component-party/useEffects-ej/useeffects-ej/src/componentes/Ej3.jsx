@@ -32,7 +32,8 @@ const Posts = () => {
 
 
     return (
-        <div>
+        <div style={{backgroundColor:"lightgreen", padding: "20px"}}>
+            <h1>Ejercicio Datos con API</h1>
             <h2>{post.title}</h2>
             <p>{post.body}</p>
         </div>

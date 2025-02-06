@@ -15,7 +15,7 @@ const Contador = () => {
     const incrementar = () => setContador(contador + 1);
     const decrementar = () => setContador(contador - 1);
 
-    return (<div>
+    return (<div style={{backgroundColor:"lightblue", padding: "20px"}}>
         <h1>Contador</h1>
         <h3>{contador}</h3>
         <button onClick={incrementar}>Incrementar</button>
