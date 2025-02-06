@@ -27,6 +27,13 @@ import { Interruptor } from './components/estados/Interruptor'
 import FormRegistro from './components/estados/FormRegistro'
 import { useState } from 'react';
 
+//importar componentes useEffect
+import Consolelog from './components/useeffect/Consolelog';
+import TiempoVida from './components/useeffect/Tiempo';
+import ConsultaAPI from './components/useeffect/ConsultaAPI';
+import Resize from './components/useeffect/Resize';
+import Montar from './components/useeffect/Montar';
+
 
 
 // utilizar export común con {} para mandar más de una cosa { TarjetaUsuario, Avatar }
@@ -152,6 +159,19 @@ const App = () => {
 
     {/* Actividad 2 extras */}
     <Gallery images={images} />
+
+
+
+
+    {/* EJERCICIOS: useEffect */}
+
+
+    <Consolelog />
+    <TiempoVida/>
+    <ConsultaAPI/>
+    <Resize/>
+    <Montar />
+    
 
   </>);
 }

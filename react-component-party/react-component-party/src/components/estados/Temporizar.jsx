@@ -4,7 +4,7 @@ const Temporizar = () => {
 
     const [segundos, setSegundos] = useState(0);
 
-    useEffet(() => {
+    useEffect(() => {
 
         //codigo que ejecutamos luego de renderizar mi componente
         const idInterval = setInterval(() => {
