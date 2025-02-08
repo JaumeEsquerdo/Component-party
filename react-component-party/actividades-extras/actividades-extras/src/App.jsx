@@ -6,6 +6,8 @@ import Testimonios from './components/ListaTestimonios'
 import EventosCalendario from './components/ListaCalendario'
 import TarjetasRecetas from './components/TarjetasRecetas'
 
+import Timer from './components/Timer'
+
 function App() {
 
   // JSON de Restaurante
@@ -237,7 +239,10 @@ const tarjetasRecetas = [
     <Testimonios listatestimonios={testimonios} />
     <EventosCalendario listacalendario={eventosCalendario}/>
     <TarjetasRecetas TarjetasDeRecetas={tarjetasRecetas}/>
-
+    
+    <Timer/>
+    
+    
     </>
   )
 }
