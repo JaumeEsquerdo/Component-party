@@ -19,7 +19,9 @@ import Temporizar from './components/estados/Temporizar';
 
 import ImgLogo from './assets/img/logo.png';
 
+import '@/css/styles.css';
 import './css/App.css'
+
 
 //importar componentes
 import { Contador } from './components/estados/Contador'

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 
+
 import { Img } from '@/components/estados/Img'
 
 export const SliderImg = ({ listaImagenes, autoPlay=false }) => {
@@ -33,7 +34,7 @@ export const SliderImg = ({ listaImagenes, autoPlay=false }) => {
     }
 
     const handleNext = () => {
-        const nextIndex = (indice === listaImagenes.lenght - 1) ? 0 : indice + 1;
+        const nextIndex = (indice === listaImagenes.length - 1) ? 0 : indice + 1;
         setIndice(nextIndex)
     }
 
@@ -46,7 +47,7 @@ export const SliderImg = ({ listaImagenes, autoPlay=false }) => {
             <h1>SLIDER DE IMAGENES</h1>
 
             <div className="carousel" >
-                <div className="carousel-container" style={{ transform: `translateX${indice * 100}` }}>
+                <div className="carousel-container" style={{ transform: `translateX(-${indice * 100}%)` }}>
                     {/* {listaImagenes.map(img => <Img key={img.id} img={img} />)
 
                     } */}
