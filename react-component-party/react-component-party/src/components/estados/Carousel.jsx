@@ -62,11 +62,15 @@ export const SliderImg = ({ listaImagenes, autoPlay=false }) => {
                             <Img key={i} img={img} />
                         ))
                     }
+
+
+
+                    
                 </div>
 
                 <div className="carousel-controls" >
-                    <button onClick={handlePrev}>Anterior</button>
-                    <button onClick={handleNext}>Siguiente</button>
+                    <button  className='carousel-btnPrev' onClick={handlePrev}>Anterior</button>
+                    <button className='carousel-btnNext' onClick={handleNext}>Siguiente</button>
                 </div>
                 <div className="carousel-indicators" >
 

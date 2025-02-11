@@ -34,12 +34,14 @@
 }
 
 .carousel{
-    position:relative;
     width: 100%;
     overflow: hidden;
+    position: relative;
 }
 
 .carousel-container{
+    position:relative;
+
     display: flex;
 }
 
@@ -48,9 +50,31 @@
     box-sizing: border-box;
     
 }
-
+/* .carousel-controls{
+    
+} */
+.carousel-indicators{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* centrar respecto su propio tamaño, con solo left 50% se centra al medio respecto un borde del boton no respecto el propio centro del boton */
+}
 .carousel-slide img{
     width: 100%;
     display: block;
 
+}
+.carousel-btnPrev{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-btnNext{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
 }
