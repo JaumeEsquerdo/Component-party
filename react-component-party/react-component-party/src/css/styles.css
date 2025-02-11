@@ -32,3 +32,25 @@
 .AlertBox--error{
     background-color: #d34d4d;
 }
+
+.carrousel{
+    position:relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carrousel-container{
+    display: flex;
+}
+
+.carrousel-slide{
+    min-width: 100%;
+    box-sizing: border-box;
+    
+}
+
+.carrousel-slide img{
+    width: 100%;
+    display: block;
+
+}

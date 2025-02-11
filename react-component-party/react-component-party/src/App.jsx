@@ -33,7 +33,14 @@ import TiempoVida from './components/useeffect/Tiempo';
 import ConsultaAPI from './components/useeffect/ConsultaAPI';
 import Resize from './components/useeffect/Resize';
 import Montar from './components/useeffect/Montar';
+import { SliderImg } from '@/components/estados/Carousel';
 
+
+const listaImagenes = [
+        {id:1, src:`https://dummyjson.com/image/400x200/008080/ffffff?text=imagen+1`},
+        {id:2, src:`https://dummyjson.com/image/400x200/008080/ffffff?text=imagen+2`},
+        {id:3, src:`https://dummyjson.com/image/400x200/008080/ffffff?text=imagen+3`}
+    ]
 
 
 // utilizar export común con {} para mandar más de una cosa { TarjetaUsuario, Avatar }
@@ -171,6 +178,9 @@ const App = () => {
     <ConsultaAPI/>
     <Resize/>
     <Montar />
+    <SliderImg listaImagenes={listaImagenes}/>
+    <SliderImg listaImagenes={listaImagenes} autoPlay/>
+
     
 
   </>);
