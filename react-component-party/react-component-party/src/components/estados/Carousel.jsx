@@ -9,11 +9,12 @@ export const SliderImg = ({ listaImagenes, autoPlay=false }) => {
 
 
 
-    const [indice, setIndice] = useState(0)
+    const [indice, setIndice] = useState(0);
+    const [isPaused, setIsPaused] = useState(false);
 
     useEffect(()=>{
     console.log("useEffect");
-    if(!autoPlay) return
+    if(!autoPlay || isPaused) return //si autoPlay o si isPaused es true no se activa el autoPlay (si isPaused es true (se pone onMouseEnter) activa con setIsPaused(true))
     
     const interval = setInterval(()=>{
         handleNext();
@@ -23,7 +24,7 @@ export const SliderImg = ({ listaImagenes, autoPlay=false }) => {
         clearInterval(interval);
     }
 
-    },[indice, autoPlay])
+    },[indice, autoPlay, isPaused])
 
 
 
@@ -34,8 +35,8 @@ export const SliderImg = ({ listaImagenes, autoPlay=false }) => {
     }
 
     const handleNext = () => {
-        const nextIndex = (indice === listaImagenes.length - 1) ? 0 : indice + 1;
-        setIndice(nextIndex)
+        const newIndex = (indice === listaImagenes.length - 1) ? 0 : indice + 1;
+        setIndice(newIndex)
     }
 
     const handleGoToSlide = (i) => {
@@ -46,7 +47,11 @@ export const SliderImg = ({ listaImagenes, autoPlay=false }) => {
         <div>
             <h1>SLIDER DE IMAGENES</h1>
 
-            <div className="carousel" >
+            <div className="carousel" 
+            onMouseEnter={()=> setIsPaused(true)} //pausar
+            onMouseLeave={()=> setIsPaused(false)} //qquitar pause
+
+            >
                 <div className="carousel-container" style={{ transform: `translateX(-${indice * 100}%)` }}>
                     {/* {listaImagenes.map(img => <Img key={img.id} img={img} />)
 
