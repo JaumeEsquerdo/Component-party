@@ -1,13 +1,11 @@
 import { useState, useEffect } from 'react';
 
 
-import { Img } from '@/components/estados/Img'
+import { Img } from '@/modulos/Img'
 
 export const SliderImg = ({ listaImagenes, autoPlay=false }) => {
 
     // const { id, src } = listaImagenes
-
-
 
     const [indice, setIndice] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
@@ -62,8 +60,6 @@ export const SliderImg = ({ listaImagenes, autoPlay=false }) => {
                             <Img key={i} img={img} />
                         ))
                     }
-
-
 
                     
                 </div>

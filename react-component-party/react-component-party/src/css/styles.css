@@ -40,7 +40,8 @@
 }
 
 .carousel-container{
-    position:relative;
+    /* position:relative; */
+    transition: transform 1s ease-in-out;
 
     display: flex;
 }

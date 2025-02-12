@@ -21,6 +21,7 @@ import ImgLogo from './assets/img/logo.png';
 
 import '@/css/styles.css';
 import './css/App.css'
+import '@/css/menus.css'
 
 
 //importar componentes
@@ -29,20 +30,62 @@ import { Interruptor } from './components/estados/Interruptor'
 import FormRegistro from './components/estados/FormRegistro'
 import { useState } from 'react';
 
+
 //importar componentes useEffect
 import Consolelog from './components/useeffect/Consolelog';
 import TiempoVida from './components/useeffect/Tiempo';
 import ConsultaAPI from './components/useeffect/ConsultaAPI';
 import Resize from './components/useeffect/Resize';
 import Montar from './components/useeffect/Montar';
-import { SliderImg } from '@/components/estados/Carousel';
+import { SliderImg } from '@/modulos/Carousel';
 
+//menus
+import { MenuHorizontal } from './menus/MenuHorizontal';
+import { MenuDropDown } from './menus/MenuDropdown';
+import { MenuCategorias } from './menus/MenuCategorias';
+
+
+const menuItems = [
+  { label: "Home", url: "./" },
+  { label: "Configuración", url: "/config" },
+  { label: "Ayuda", url: "./support" }
+];
+
+const menuCategorias = [
+  {
+    name: "Home",
+    icon: "fa-tachometer-alt",
+    items:[
+      {label:"Dashboard", url:"./dashboard"},
+      {label:"Reportes", url:"./reports"},
+    ]
+  },
+  {
+    name: "Configuración",
+    icon: "fa-cog",
+    items:[
+      {label:"Perfil", url:"./profile"},
+      {label:"Tu Cuenta", url:"./account"},
+    ]
+  },
+  {
+    name: "Ayuda",
+    icon: "fa-question-circle",
+    items:[
+      {label:"FAQ", url:"./faq"},
+      {label:"Soporte", url:"./support"},
+    ]
+  }
+];
 
 const listaImagenes = [
-        {id:1, src:`https://dummyjson.com/image/400x200/008080/ffffff?text=imagen+1`},
-        {id:2, src:`https://dummyjson.com/image/400x200/008080/ffffff?text=imagen+2`},
-        {id:3, src:`https://dummyjson.com/image/400x200/008080/ffffff?text=imagen+3`}
-    ]
+  { id: 1, src: `https://dummyjson.com/image/400x200/008080/ffffff?text=imagen+1` },
+  { id: 2, src: `https://dummyjson.com/image/400x200/008080/ffffff?text=imagen+2` },
+  { id: 3, src: `https://dummyjson.com/image/400x200/008080/ffffff?text=imagen+3` }
+];
+
+
+
 
 
 // utilizar export común con {} para mandar más de una cosa { TarjetaUsuario, Avatar }
@@ -100,7 +143,7 @@ const App = () => {
 
 
   return (<>
-
+    {/* 
     <h3>Ejemplos con useState</h3>
 
     < Contador />
@@ -110,7 +153,7 @@ const App = () => {
     <Interruptor />
 
 
-    {/* Crear una lista de tareas, utilizando un input. El input debe tener el atributo onChange={(e)=> {setVariableInteligente(e.target.value)}} */}
+    Crear una lista de tareas, utilizando un input. El input debe tener el atributo onChange={(e)=> {setVariableInteligente(e.target.value)}} 
 
     <ListaDeTareas />
 
@@ -131,28 +174,28 @@ const App = () => {
 
 
 
-    {/* ACTIVIDAD 1 */}
+     ACTIVIDAD 1
     <TarjetaUsuario nombre={lista[0].nombre} edad={lista[0].edad} ocupacion={lista[0].ocupacion} />
     <TarjetaUsuario nombre={lista[1].nombre} edad={lista[1].edad} ocupacion={"no tiene trabajo"} />
     <TarjetaUsuario nombre={lista[2].nombre} edad={lista[2].edad} ocupacion={lista[2].ocupacion} />
 
-    {/* ACTIVIDAD 2 pasamos aqui el array de tareas a ListaTareas */}
+     ACTIVIDAD 2 pasamos aqui el array de tareas a ListaTareas 
     <ListaTareas tareas={tareas} />
 
-    {/* ACTIVIDAD 3 */}
+    ACTIVIDAD 3 
     <div><PerfilUsuario userData={userData} /></div>
 
-    {/* ACTIVIDAD 4 */}
+    ACTIVIDAD 4 
     <GaleriaImagenes imageList={imageList} />
 
-    {/* Componente con children ACTIVIDAD 5 */}
+     Componente con children ACTIVIDAD 5 
     <BlogPost titulo="Mi Primer Post" autor="Tomi" fecha="2024-07-01" >
       <p>Lorem ipsum dolor,adipisci unde tempora recusandae tenetur numquam reprehenderit id quaerat, iure magni consectetur alias neque amet, quisquam repudiandae? Saepe temporibus inventore ipsa! Praesentium!</p>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
     </BlogPost>
-    {/* si es contenido se manda como children, si son datos se mandan como props */}
+     si es contenido se manda como children, si son datos se mandan como props 
 
-    {/* ACTIVIDAD 10 */}
+    ACTIVIDAD 10 
     <AlertBox status="success">
       Perfecto!
     </AlertBox>
@@ -163,16 +206,16 @@ const App = () => {
       ERRRRRRRRROR
     </AlertBox>
 
-    {/* ACTIVIDAD 1 EXTRAS */}
+    ACTIVIDAD 1 EXTRAS 
     <Header logo={ImgLogo} />
 
-    {/* Actividad 2 extras */}
+    Actividad 2 extras 
     <Gallery images={images} />
 
 
 
 
-    {/* EJERCICIOS: useEffect */}
+   EJERCICIOS: useEffect 
 
 
     <Consolelog />
@@ -185,9 +228,14 @@ const App = () => {
 
     
     <SliderImg listaImagenes={listaImagenes}/>
-    <SliderImg listaImagenes={listaImagenes} autoPlay/>
+    <SliderImg listaImagenes={listaImagenes} autoPlay/> */}
 
+    <h2>Módulos de menus de navegacion</h2>
+    {/* <MenuHorizontal items={menuItems}/> */}
+
+    {/* <MenuDropDown items={menuItems} /> */}
     
+    <MenuCategorias listaItems={menuCategorias} />
 
   </>);
 }

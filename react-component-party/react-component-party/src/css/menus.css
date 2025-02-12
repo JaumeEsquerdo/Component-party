@@ -1,0 +1,40 @@
+.Menu{
+    width: 100%;
+}
+
+.Menu-ul{
+    
+    list-style: none;
+    justify-content: center;
+    display: flex;
+    
+}
+.open{
+    display: flex;
+}
+
+/* .Menu-li{
+    width: 100%;
+    height: 100%;
+} */
+
+.Menu-a{
+    margin: 0 20px;
+    color: rgb(135, 21, 87);
+    font-size: 20px;
+    display: block;
+    transition: color 1s ease-in-out, transform 1s ease-in-out;
+    /* background-color: aqua; */
+}
+
+/* .Menu-li{
+    transform: scale(1);
+}
+.Menu-li:hover{
+    transform: scale(2);
+} */
+
+.Menu-a:hover{
+    transform: scale(1.2);
+    color: rgb(4, 13, 60);
+}
