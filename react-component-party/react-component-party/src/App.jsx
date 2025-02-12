@@ -180,6 +180,10 @@ const App = () => {
     <ConsultaAPI/>
     <Resize/>
     <Montar />
+
+
+
+    
     <SliderImg listaImagenes={listaImagenes}/>
     <SliderImg listaImagenes={listaImagenes} autoPlay/>
 
