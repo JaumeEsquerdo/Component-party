@@ -21,7 +21,8 @@ import ImgLogo from './assets/img/logo.png';
 
 import '@/css/styles.css';
 import './css/App.css'
-import '@/css/menus.css'
+// import '@/css/menus.css'
+import '@/css/menu-categorias.css'
 
 
 //importar componentes

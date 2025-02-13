@@ -24,7 +24,7 @@ export const MenuDropDown = ({ items }) => {
 
             <nav className='Menu'>
                 {
-                    isOpen && (<ul className={`Menu-ul`}>
+                    isOpen && (<ul className="Menu-ul">
                         {items.map((item, i) => (
                             <ItemNav key={i} item={item} />
                         ))}
@@ -43,7 +43,7 @@ export const ItemNav = ({ item }) => {
     const { label, url } = item;
 
     return (
-        <li className='Menu-li'>
+        <li className='mi-Menu-li'>
             <a className='Menu-a' href={url}>{label}</a>
         </li>
     );
