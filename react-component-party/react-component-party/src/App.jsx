@@ -51,6 +51,7 @@ import {MenuVerticalProfe}  from './menus/MenuVerticalProfe';
 import { ListaProductos } from './components/act-extras/ListaProductos';
 import { Testimonios } from './components/act-extras/Testimonios';
 import {EventosCalendario} from './components/act-extras/EventosCalendario';
+import { ListaDeCategorias } from './components/act-extras/Restaurant';
 
 
 const menuItems = [
@@ -236,6 +237,56 @@ const App = () => {
       }
     ];
 
+    
+   // JSON de Restaurante
+   // Comp: ListaCategorias, ListaPlatos, Plato
+  const restaurant = {
+    "menu": {
+      "entrantes": [
+        {
+          "id": 1,
+          "nombre": "Ensalada César",
+          "precio": 8.99,
+          "descripcion": "Lechuga romana, crutones, queso parmesano y aderezo César."
+        },
+        {
+          "id": 2,
+          "nombre": "Sopa de tomate",
+          "precio": 6.99,
+          "descripcion": "Sopa casera de tomate con albahaca fresca."
+        }
+      ],
+      "principales": [
+        {
+          "id": 3,
+          "nombre": "Filete de salmón",
+          "precio": 18.99,
+          "descripcion": "Salmón a la parrilla con salsa de limón y eneldo, acompañado de verduras al vapor."
+        },
+        {
+          "id": 4,
+          "nombre": "Pasta Alfredo",
+          "precio": 14.99,
+          "descripcion": "Fettuccine en salsa cremosa de queso parmesano."
+        }
+      ],
+      "postres": [
+        {
+          "id": 5,
+          "nombre": "Tiramisú",
+          "precio": 7.99,
+          "descripcion": "Clásico postre italiano con capas de bizcocho, café y crema de mascarpone."
+        },
+        {
+          "id": 6,
+          "nombre": "Tarta de manzana",
+          "precio": 6.99,
+          "descripcion": "Tarta casera de manzana servida con helado de vainilla."
+        }
+      ]
+    }
+  };
+
   return (<>
     {/* 
     <h3>Ejemplos con useState</h3>
@@ -342,6 +393,9 @@ const App = () => {
     <Testimonios testimonios={testimonios} />
 
     <EventosCalendario eventos={eventosCalendario}/>
+
+    <ListaDeCategorias restaurant={restaurant}/>
+
   </>);
 }
 
