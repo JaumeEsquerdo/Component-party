@@ -19,7 +19,7 @@ export const ListaComentarios = ({ comentarios }) => {
 const Comentario = ({ comentario }) => {
     const { author, image, date, content, replies } = comentario;
     return (
-        <div style={{ background: "lightgreen" }}>
+        <div style={{ background: "LemonChiffon" }}>
             <h2>Comentarios</h2>
 
             <img src={image} alt={`Imagen del autor ${author}`} />
