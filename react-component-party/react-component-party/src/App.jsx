@@ -50,6 +50,7 @@ import {MenuVerticalProfe}  from './menus/MenuVerticalProfe';
 //ACTIVIDADES EXTRAS
 import { ListaProductos } from './components/act-extras/ListaProductos';
 import { Testimonios } from './components/act-extras/Testimonios';
+import {EventosCalendario} from './components/act-extras/EventosCalendario';
 
 
 const menuItems = [
@@ -203,6 +204,38 @@ const App = () => {
     }
   ]
 
+    // Componentes: ListaEventos, Evento, Fecha (Date+time)
+    const eventosCalendario = [
+      {
+        "id": 1,
+        "title": "Reunión de equipo",
+        "date": "2024-07-05",
+        "time": "10:00",
+        "location": "Sala de conferencias A"
+      },
+      {
+        "id": 2,
+        "title": "Lanzamiento de producto",
+        "date": "2024-07-10",
+        "time": "14:00",
+        "location": "Auditorio principal"
+      },
+      {
+        "id": 3,
+        "title": "Taller de desarrollo web",
+        "date": "2024-07-15",
+        "time": "09:00",
+        "location": "Sala de formación B"
+      },
+      {
+        "id": 4,
+        "title": "Cena de empresa",
+        "date": "2024-07-20",
+        "time": "20:00",
+        "location": "Restaurante El Mirador"
+      }
+    ];
+
   return (<>
     {/* 
     <h3>Ejemplos con useState</h3>
@@ -254,7 +287,7 @@ const App = () => {
       <p>Lorem ipsum dolor,adipisci unde tempora recusandae tenetur numquam reprehenderit id quaerat, iure magni consectetur alias neque amet, quisquam repudiandae? Saepe temporibus inventore ipsa! Praesentium!</p>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
     </BlogPost>
-     si es contenido se manda como children, si son datos se mandan como props 
+    si es contenido se manda como children, si son datos se mandan como props 
 
     ACTIVIDAD 10 
     <AlertBox status="success">
@@ -276,7 +309,7 @@ const App = () => {
 
 
 
-   EJERCICIOS: useEffect 
+  EJERCICIOS: useEffect 
 
 
     <Consolelog />
@@ -307,6 +340,8 @@ const App = () => {
     <ListaProductos datosProductos={productos} />
 
     <Testimonios testimonios={testimonios} />
+
+    <EventosCalendario eventos={eventosCalendario}/>
   </>);
 }
 
