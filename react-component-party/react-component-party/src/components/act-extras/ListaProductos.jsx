@@ -5,14 +5,14 @@ export const ListaProductos = ({ datosProductos }) => {
     const [esPar, setEsPar] = useState({});
 
     const handleColor= (id)=>{
-        if(i % 2 == 0){setEsPar((prev)=>({
+        if(id % 2 == 0){setEsPar((prev)=>({
             ...prev, [id]: !prev[id]
         }))} else{ return}
         
     }
     useEffect(() => {
         console.log(esPar);
-    }, []);
+    }, [esPar]);
 
 
     return (<>
@@ -20,8 +20,8 @@ export const ListaProductos = ({ datosProductos }) => {
             <h1>Listado de productos</h1>
             {
                 datosProductos.map((datoProducto, i) => (
-                    <div key={i}>
-                        <Producto datoProducto={datoProducto} handleColor={handleColor} esPar={esPar[datoProducto]} />
+                    <div className='Product' key={datoProducto.id}>
+                        <Producto datoProducto={datoProducto} handleColor={handleColor} esPar={esPar[datoProducto.id]} />
                     </div>
                 ))
             }
@@ -30,13 +30,14 @@ export const ListaProductos = ({ datosProductos }) => {
     );
 }
 
-const Producto = ({ datoProducto, handleColor }) => {
-    const { id, name, price, description, image, esPar } = datoProducto;
+const Producto = ({ datoProducto, handleColor, esPar }) => {
+    const { id, name, price, description, image } = datoProducto;
     return (
-        <div onClick={()=>handleColor(id)} style={{backgroundColor:esPar?"Blue":"Red", borderRadius:"20px"}}>
-            <img src={image} alt={`Imagen de ${name}`} />
+        <div className='Product-container' onClick={()=>handleColor(id)} style={{backgroundColor:esPar?"gray":"lightgray", borderRadius:"20px"}}>
+            <img className='Product-img' src={image} alt={`Imagen de ${name}`} />
+            <p><strong>{name}</strong></p>
             <p>{description}</p>
-            <p>{price}</p>
+            <p>{price} €</p>
         </div>
     );
 }

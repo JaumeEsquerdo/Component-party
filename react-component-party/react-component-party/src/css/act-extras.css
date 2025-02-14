@@ -1,0 +1,14 @@
+.Product-container{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    padding: 0 20px 20px;
+}
+.Product-img{
+    /* aspect-ratio: 16/9; */
+    height: 300px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.Product{
+    margin: 20px;
+}

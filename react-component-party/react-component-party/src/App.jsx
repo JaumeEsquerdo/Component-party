@@ -23,6 +23,7 @@ import '@/css/styles.css';
 import './css/App.css'
 // import '@/css/menus.css'
 import '@/css/menu-categorias.css'
+import '@/css/act-extras.css'
 
 
 //importar componentes
@@ -153,21 +154,21 @@ const App = () => {
       "name": "Smartphone XYZ",
       "price": 599.99,
       "description": "Último modelo con cámara de alta resolución y batería de larga duración.",
-      "image": "https://example.com/smartphone-xyz.jpg"
+      "image": "./src/assets/img/img-movil.avif"
     },
     {
       "id": 2,
       "name": "Laptop UltraBook",
       "price": 1299.99,
       "description": "Potente y ligera, perfecta para profesionales en movimiento.",
-      "image": "https://example.com/laptop-ultrabook.jpg"
+      "image": "./src/assets/img/auricular.jpg"
     },
     {
       "id": 3,
       "name": "Auriculares NoiseCancel",
       "price": 249.99,
       "description": "Experimenta un sonido inmersivo con cancelación de ruido activa.",
-      "image": "https://example.com/auriculares-noisecancel.jpg"
+      "image": "./src/assets/img/tablet.png"
     }
   ];
 
@@ -303,7 +304,7 @@ const App = () => {
 
     {/* ACTIVIDADES EXTRAS */}
 
-    {/* <ListaProductos datosProductos={productos} /> */}
+    <ListaProductos datosProductos={productos} />
 
     <Testimonios testimonios={testimonios} />
   </>);

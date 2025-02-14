@@ -45,6 +45,7 @@ const Li = ({ testimonio }) => {
                     <h2>{name}</h2>
                     <p>{position} en {company}</p>
                     <p>Testimonio: {testimonial}</p>
+                    <Stars rating={rating}/>
                     <img src={image} alt={`Imagen de ${name}`} />
 
 
@@ -56,4 +57,13 @@ const Li = ({ testimonio }) => {
     );
 }
 
+const Stars = ({rating})=>{
+    return(
+        <div>
+            {[...Array(5)].map((_,i)=>(
+                <span key={i} style={{color:i< rating?"gold":"gray"}}>★</span>
+            ))}
 
+        </div>
+    )
+}
