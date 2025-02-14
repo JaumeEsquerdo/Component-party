@@ -52,6 +52,8 @@ import { ListaProductos } from './components/act-extras/ListaProductos';
 import { Testimonios } from './components/act-extras/Testimonios';
 import {EventosCalendario} from './components/act-extras/EventosCalendario';
 import { ListaDeCategorias } from './components/act-extras/Restaurant';
+import { ListaComentarios } from './components/act-extras/Comentarios';
+
 
 
 const menuItems = [
@@ -287,6 +289,43 @@ const App = () => {
     }
   };
 
+  // Json de Comentarios
+  // Comp: ListaComentarios, Comentario, ListaRespuestas, Respuesta, FechaParaHumanos
+  const comentarios= [
+    {
+      "id": 1,
+      "author": "María García",
+      "image": "https://example.com/maria-garcia.jpg",
+      "date": "2024-07-01T10:30:00Z",
+      "content": "¡Excelente artículo! Me ha ayudado mucho a entender el tema.",
+      "replies": [
+        {
+          "id": 2,
+          "author": "Juan Pérez",
+          "image": "https://example.com/juan-perez.jpg",
+          "date": "2024-07-01T11:15:00Z",
+          "content": "Totalmente de acuerdo, María. El autor ha explicado todo de manera muy clara."
+        },
+      ]
+    },
+    {
+      "id": 3,
+      "author": "Carlos Rodríguez",
+      "image": "https://example.com/carlos-rodriguez.jpg",
+      "date": "2024-07-02T09:45:00Z",
+      "content": "Me gustaría ver más ejemplos prácticos en futuros artículos.",
+      "replies": [
+        {
+          "id": 4,
+          "author": "Ana Martínez",
+          "image": "https://example.com/ana-martinez.jpg",
+          "date": "2024-07-02T10:30:00Z",
+          "content": "Buena sugerencia, Carlos. Yo también creo que más ejemplos serían útiles."
+        }
+      ]
+    }
+  ];
+
   return (<>
     {/* 
     <h3>Ejemplos con useState</h3>
@@ -395,6 +434,9 @@ const App = () => {
     <EventosCalendario eventos={eventosCalendario}/>
 
     <ListaDeCategorias restaurant={restaurant}/>
+
+    <ListaComentarios comentarios={comentarios}/>
+
 
   </>);
 }
