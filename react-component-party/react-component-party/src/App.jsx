@@ -53,6 +53,7 @@ import { Testimonios } from './components/act-extras/Testimonios';
 import {EventosCalendario} from './components/act-extras/EventosCalendario';
 import { ListaDeCategorias } from './components/act-extras/Restaurant';
 import { ListaComentarios } from './components/act-extras/Comentarios';
+import { TarjetasRecetas } from './components/act-extras/TarjetasRecetas';
 
 
 
@@ -326,6 +327,58 @@ const App = () => {
     }
   ];
 
+  // JSON de Instrucciones de Recetas (Componentes genéricos)
+  // Comp: ListaItems, Item, ItemHeader, ListaTextos
+  const tarjetasRecetas = [
+    {
+      "id": 1,
+      "name": "Paella Valenciana",
+      "image": "https://example.com/paella.jpg",
+      "ingredients": [
+        "400g de arroz bomba",
+        "1 kg de pollo troceado",
+        "200g de judías verdes",
+        "200g de garrofó (judía blanca)",
+        "1 tomate rallado",
+        "Azafrán",
+        "Aceite de oliva",
+        "Sal",
+        "Agua"
+      ],
+      "instructions": [
+        "Sofríe el pollo en una paella con aceite de oliva.",
+        "Añade las judías verdes y el garrofó, y sofríe unos minutos más.",
+        "Incorpora el tomate rallado y cocina hasta que se evapore el agua.",
+        "Agrega el arroz y remueve para que se impregne bien.",
+        "Vierte el agua caliente (el doble que de arroz) y el azafrán.",
+        "Cocina a fuego fuerte durante 10 minutos y luego a fuego lento otros 8 minutos.",
+        "Deja reposar unos minutos antes de servir."
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Guacamole",
+      "image": "https://example.com/guacamole.jpg",
+      "ingredients": [
+        "3 aguacates maduros",
+        "1 tomate",
+        "1/2 cebolla",
+        "1 chile jalapeño (opcional)",
+        "Jugo de 1 limón",
+        "Cilantro fresco",
+        "Sal"
+      ],
+      "instructions": [
+        "Corta los aguacates por la mitad, retira el hueso y vacía la pulpa en un bol.",
+        "Machaca los aguacates con un tenedor hasta obtener una consistencia cremosa.",
+        "Pica finamente el tomate, la cebolla y el jalapeño (si lo usas) y añádelos al bol.",
+        "Agrega el jugo de limón, cilantro picado y sal al gusto.",
+        "Mezcla todos los ingredientes hasta que estén bien integrados.",
+        "Sirve inmediatamente con totopos o chips de maíz."
+      ]
+    }
+  ];
+
   return (<>
     {/* 
     <h3>Ejemplos con useState</h3>
@@ -436,6 +489,9 @@ const App = () => {
     <ListaDeCategorias restaurant={restaurant}/>
 
     <ListaComentarios comentarios={comentarios}/>
+
+    <TarjetasRecetas recetas={tarjetasRecetas}/>
+
 
 
   </>);
